@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: f094e2bfe437700335a6ec8f9d7340968283f350
+  branch: master
+  specs:
+    faker (2.13.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,6 +66,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    awesome_print (1.8.0)
     bcrypt (3.1.15)
     bindex (0.8.1)
     bootsnap (1.4.7)
@@ -214,10 +223,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   devise
+  faker!
   jbuilder (~> 2.7)
   listen (~> 3.2)
   puma (~> 4.1)
