@@ -9,6 +9,7 @@ namespace :dev do
       show_spinner("Creating the database...") {  %x(rails db:create) }
       show_spinner("Migrating the tables...") { %x(rails db:migrate) }
       show_spinner("Registering the default administrator...") { %x(rails dev:add_default_admin) }
+      show_spinner("Registering the extra administrators...") { %x(rails dev:add_extra_admins) }
       show_spinner("Registering the default user...") { %x(rails dev:add_default_user) }
     else
       puts "You are not in a development environment."
@@ -22,6 +23,17 @@ namespace :dev do
       password: DEFAULT_PASSWORD,
       password_confirmation: DEFAULT_PASSWORD
     )
+  end
+
+  desc "Add extra administrators"
+  task add_extra_admins: :environment do
+    10.times do |adm|
+      Admin.create!(
+        email: Faker::Internet.email,
+        password: DEFAULT_PASSWORD,
+        password_confirmation: DEFAULT_PASSWORD
+      )
+    end
   end
 
   desc "Add the default user"
