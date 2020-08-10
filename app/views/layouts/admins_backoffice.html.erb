@@ -191,13 +191,9 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
-                <p>
-                  Simple Link
-                  <span class="right badge badge-danger">New</span>
-                </p>
-              </a>
+              <%= link_to destroy_admin_session_path, method: :delete, class:"nav-link" do %>
+                <i class='fas fa-sign-out-alt'></i> Sair
+              <% end %>
             </li>
           </ul>
         </nav>
