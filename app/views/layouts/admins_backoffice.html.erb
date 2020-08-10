@@ -52,16 +52,20 @@
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-item">
-                <a href="#" class="nav-link" >
+
+                <%= link_to admins_backoffice_welcome_index_path, class:"nav-link" do  %>
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>Dashboard</p>
-                </a>
+                <% end %>
+
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" >
+
+                <%= link_to admins_backoffice_admins_index_path, class:"nav-link" do %>
                   <i class="nav-icon fas fa-users"></i>
                   <p>Admistradores</p>
-                </a>
+                <% end %>
+
               </li>
             </ul>
           </nav>
@@ -71,9 +75,13 @@
       <div class="content-wrapper">
         <div class="content">
           <div class="container-fluid">
-
-            <%= yield %>
-
+            <div class="row">
+              <div class="col-12 p-5">
+                <h1>Backoffice Adminstrativo</h1>
+                <hr>
+                <%= yield %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
