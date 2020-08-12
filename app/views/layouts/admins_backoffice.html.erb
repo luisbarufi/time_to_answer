@@ -32,11 +32,16 @@
                 <i class="fas fa-user"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              
-                <%= link_to destroy_admin_session_path, method: :delete, class:"nav-link" do %>
-                  <i class='fas fa-sign-out-alt'></i> Sair
-                <% end %>
-
+                <ul class="list-group">
+                  <li class="nav-link">
+                    <%= current_admin.email %>
+                  </li>
+                  <li class="nav-link">
+                    <%= link_to destroy_admin_session_path, method: :delete do %>
+                      <i class='fas fa-sign-out-alt'></i> Sair
+                    <% end %>
+                  </li>                
+                </ul>
               </div>
             </div>
           </li>
