@@ -1,0 +1,12 @@
+  <% if notice %>
+    <%= javascript_tag do %>
+      $.bootstrapGrowl("<%= notice %>", {
+        type: 'success',
+        align: 'right',
+        width: 350,
+        allow_dismiss: true,
+        stackup_spacing: 10
+      });
+    <% end %>
+  <% end %>
+  
