@@ -10,6 +10,7 @@ require("channels")
 require('jquery')
 require("popper.js")
 require("bootstrap");
+require("bootstrap-growl-ifightcrime");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -21,4 +22,4 @@ require("bootstrap");
 
 import "../src/application.css";
 import "@fortawesome/fontawesome-free/js/all";
-import './adminlte.min.js'
+import "./adminlte.min.js";
