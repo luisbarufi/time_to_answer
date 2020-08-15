@@ -1,11 +1,13 @@
 <% if notice %>
   <%= javascript_tag do %>
-    $.bootstrapGrowl("<%= notice %>", {
-      type: 'success',
-      align: 'right',
-      width: 350,
-      allow_dismiss: true,
-      stackup_spacing: 10
-    });
+
+    <% flash.keys.each do |msg|
+      toastr_msg = msg
+      toastr_msg = 'success' if msg == 'notice'
+      toastr_msg = 'error' if msg == 'alert'
+      %>
+      toastr["<%= toastr_msg %>"]("<%= flash[msg] %>");
+    <% end %>
+
   <% end %>
 <% end %>
