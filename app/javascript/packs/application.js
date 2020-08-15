@@ -10,8 +10,6 @@ require("channels")
 require('jquery')
 require("popper.js")
 require("bootstrap");
-require("bootstrap-growl-ifightcrime");
-
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -23,3 +21,25 @@ require("bootstrap-growl-ifightcrime");
 import "../src/application.css";
 import "@fortawesome/fontawesome-free/js/all";
 import "./adminlte.min.js";
+
+import toastr from 'toastr';
+
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar": false,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"  
+ };
+
+global.toastr = toastr;
