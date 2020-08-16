@@ -27,7 +27,7 @@
                 <% end %>
               </td>
               <td>
-                <%= link_to '#', class:"float-right" do %>
+                <%= link_to admins_backoffice_admin_path(admin), method: :delete, data: { confirm: "Tem certeza?"}, class:"float-right" do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>
               </td>
