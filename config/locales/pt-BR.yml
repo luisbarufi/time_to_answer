@@ -1,4 +1,4 @@
-en:
+pt-BR:
   views:
     pagination:
       first: "&laquo; Primeira"
@@ -7,6 +7,6 @@ en:
       next: "Próxima &rsaquo;"
       truncate: "&hellip;"
     actions:
-      show: Show
-      edit: Edit
-      delete: Delete
+      show: Ver
+      edit: Editar
+      delete: Excluir 
