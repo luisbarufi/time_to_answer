@@ -40,14 +40,14 @@
                     <%= link_to destroy_admin_session_path, method: :delete do %>
                       <i class='fas fa-sign-out-alt'></i> Sair
                     <% end %>
-                  </li>                
+                  </li>
                 </ul>
               </div>
             </div>
           </li>
         </ul>
       </nav>
-      
+
       <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <a href="#" class="brand-link">
           <!--img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"-->
@@ -80,7 +80,16 @@
                   <p>Assuntos/Áreas</p>
                 <% end %>
 
-              </li>              
+              </li>
+
+              <li class="nav-item">
+
+                <%= link_to admins_backoffice_questions_path, class:"nav-link" do %>
+                  <i class="nav-icon fas fa-list"></i>
+                  <p>Perguntas</p>
+                <% end %>
+
+              </li>
             </ul>
           </nav>
         </div>
@@ -97,7 +106,7 @@
           </div>
         </div>
       </div>
-      
+
       <footer class="main-footer">
         <div class="float-right d-none d-sm-inline">
           <p>barufiTech</p>
