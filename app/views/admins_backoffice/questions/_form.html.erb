@@ -2,7 +2,7 @@
   <div class="card-header">
     <h1><%= form_title %></h1>
       <% if @question.errors.any? %>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">    
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
           <ul class="m-auto">
             <% @question.errors.full_messages.each do |message| %>
               <li><%= message %></li>
