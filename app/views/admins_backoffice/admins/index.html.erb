@@ -1,17 +1,17 @@
 <div class="card">
   <div class="card-header">
-    <h1>Listando Administradores</h1>  
+    <h1><%= t("views.admins.title_list")%></h1>  
   </div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-hover table-bordered">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Email</th>
+            <th><%= translate_atribute(@admins, :id) %></th>
+            <th><%= translate_atribute(@admins, :email) %></th>
             <th colspan="2">
               <%= link_to new_admins_backoffice_admin_path, class:"btn btn-primary btn-sm float-right" do %>
-                New
+                <%= t("views.actions.new")%>
               <% end %>
             </th>
           </tr>
@@ -22,12 +22,12 @@
               <td><%= admin.id %></td>
               <td><%= admin.email %></td>
               <td>
-                <%= link_to edit_admins_backoffice_admin_path(admin), class:"float-right" do %>
+                <%= link_to edit_admins_backoffice_admin_path(admin), class:"float-right", title:"#{t('views.actions.edit')}" do %>
                   <i class="fas fa-edit"></i>
                 <% end %>
               </td>
               <td>
-                <%= link_to admins_backoffice_admin_path(admin), method: :delete, data: { confirm: "Tem certeza?"}, class:"float-right" do %>
+                <%= link_to admins_backoffice_admin_path(admin), method: :delete, data: { confirm: "#{t('views.actions.confirm')}"}, class:"float-right", title:"#{t('views.actions.delete')}" do %>
                   <i class="fas fa-trash-alt"></i>
                 <% end %>
               </td>

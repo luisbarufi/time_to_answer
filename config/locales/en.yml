@@ -10,3 +10,10 @@ en:
       show: Show
       edit: Edit
       delete: Delete
+      new: New
+      save: Save
+      confirm: Are you sure?
+    admins:
+      title_list: Listando Administradores
+      title_edit: Editar Administrador
+      title_new: Register Administrator
