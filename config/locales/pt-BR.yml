@@ -9,4 +9,11 @@ pt-BR:
     actions:
       show: Ver
       edit: Editar
-      delete: Excluir 
+      delete: Excluir
+      new: Novo
+      save: Salvar
+      confirm: Tem certeza?
+    admins:
+      title_list: Listando Administradores
+      title_edit: Editar Administrador
+      title_new: Cadastrar Administrador

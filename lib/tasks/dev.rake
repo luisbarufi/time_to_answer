@@ -7,7 +7,7 @@ namespace :dev do
   task setup: :environment do
     if Rails.env.development?
       show_spinner("Deleting the database...") { %x(rails db:drop) }
-      show_spinner("Creating the database...") {  %x(rails db:create) }
+      show_spinner("Creating the database...") { %x(rails db:create) }
       show_spinner("Migrating the tables...") { %x(rails db:migrate) }
       show_spinner("Registering the default administrator...") { %x(rails dev:add_default_admin) }
       show_spinner("Registering the extra administrators...") { %x(rails dev:add_extra_admins) }
