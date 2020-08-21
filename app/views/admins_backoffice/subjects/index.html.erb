@@ -7,8 +7,8 @@
       <table class="table table-hover table-bordered">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Descrição</th>
+            <th><%= translate_atribute(@subjects, :id) %></th>
+            <th><%= translate_atribute(@subjects, :description) %></th>
             <th colspan="2">
               <%= link_to new_admins_backoffice_subject_path, class:"btn btn-primary btn-sm float-right" do %>
                 New
