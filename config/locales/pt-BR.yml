@@ -17,3 +17,7 @@ pt-BR:
       title_list: Listando Administradores
       title_edit: Editar Administrador
       title_new: Cadastrar Administrador
+    subjets:
+      title_list: Listando Assuntos/Áreas
+      title_edit: Editar Assunto/Área
+      title_new: Cadastrar Assunto/Área

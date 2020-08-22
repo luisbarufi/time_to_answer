@@ -14,6 +14,10 @@ en:
       save: Save
       confirm: Are you sure?
     admins:
-      title_list: Listando Administradores
-      title_edit: Editar Administrador
-      title_new: Register Administrator
+      title_list: Listing Admins
+      title_edit: Edit Admin
+      title_new: Register Admin
+    subjets:
+      title_list: Listing Subjects
+      title_edit: Edit Subject
+      title_new: Register Subject
