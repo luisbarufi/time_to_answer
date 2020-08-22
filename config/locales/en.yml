@@ -27,3 +27,9 @@ en:
       title_new: Register Questions
     welcome:
       title: AdminsBackoffice
+
+  forms:
+    email: Type your e-mail
+    password: Type your password
+    password_confirmation: Confirm your password
+    description: Description

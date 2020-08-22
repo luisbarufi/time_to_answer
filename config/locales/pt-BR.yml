@@ -28,3 +28,8 @@ pt-BR:
     welcome:
       title: AdminsBackoffice
 
+  forms:
+    email: Digite seu E-mail
+    password: Digite sua Senha
+    password_confirmation: Confirme sua Senha
+    description: Digite a Descrição

@@ -20,7 +20,7 @@
       <%= form_with(model: [ :admins_backoffice, @subject ], local: true) do |form| %>
         <div class="form-group">
           <%= form.label :description %>
-          <%= form.text_field :description, class:"form-control", placeholder:"Descrição" %>
+          <%= form.text_field :description, class:"form-control", placeholder:"#{t('forms.description')}" %>
         </div>
         <button type="submit" class="btn btn-primary"><%= t("views.actions.save") %></button>
       <% end %>
