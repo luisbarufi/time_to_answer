@@ -21,3 +21,10 @@ pt-BR:
       title_list: Listando Assuntos/Áreas
       title_edit: Editar Assunto/Área
       title_new: Cadastrar Assunto/Área
+    questions:
+      title_list: Listando Questões
+      title_edit: Editar Questão
+      title_new: Cadastrar Questão
+    welcome:
+      title: AdminsBackoffice
+

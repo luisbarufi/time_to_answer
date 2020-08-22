@@ -21,3 +21,9 @@ en:
       title_list: Listing Subjects
       title_edit: Edit Subject
       title_new: Register Subject
+    questions:
+      title_list: Listing Questions
+      title_edit: Edit Questions
+      title_new: Register Questions
+    welcome:
+      title: AdminsBackoffice
