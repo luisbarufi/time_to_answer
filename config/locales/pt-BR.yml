@@ -14,15 +14,15 @@ pt-BR:
       save: Salvar
       confirm: Tem certeza?
     admins:
-      title_list: Listando Administradores
+      title_list: Administradores
       title_edit: Editar Administrador
       title_new: Cadastrar Administrador
     subjets:
-      title_list: Listando Assuntos/Áreas
+      title_list: Assuntos/Áreas
       title_edit: Editar Assunto/Área
       title_new: Cadastrar Assunto/Área
     questions:
-      title_list: Listando Questões
+      title_list: Questões
       title_edit: Editar Questão
       title_new: Cadastrar Questão
     welcome:
