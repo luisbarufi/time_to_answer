@@ -14,15 +14,15 @@ en:
       save: Save
       confirm: Are you sure?
     admins:
-      title_list: Listing Admins
+      title_list: Admins
       title_edit: Edit Admin
       title_new: Register Admin
     subjets:
-      title_list: Listing Subjects
+      title_list: Subjects
       title_edit: Edit Subject
       title_new: Register Subject
     questions:
-      title_list: Listing Questions
+      title_list: Questions
       title_edit: Edit Questions
       title_new: Register Questions
     welcome:
