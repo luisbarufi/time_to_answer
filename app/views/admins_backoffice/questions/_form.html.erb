@@ -26,7 +26,16 @@
           <%= form.label :subject_id %>
           <%= form.collection_select(:subject_id, @subjects, :id, :description, {}, class:"form-control") %>
         </div>
-        <button type="submit" class="btn btn-primary"><%= t("views.actions.save") %></button>
+
+        <div id="answers">
+          <%= form.fields_for :answers do |answer| %>
+            <%= render partial: 'answer_fields', locals: { f: answer } %>
+          <% end %>
+
+          <%= link_to_add_association "#{t('forms.add_answer')}", form, :answers, class:"btn btn-primary" %>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2"><%= t("views.actions.save") %></button>
       <% end %>
     </div>
   </div>
