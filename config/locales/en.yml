@@ -33,3 +33,6 @@ en:
     password: Type your password
     password_confirmation: Confirm your password
     description: Description
+    add_answer: Add answer
+    correct: Correct?
+    remove: Remove?

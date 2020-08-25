@@ -33,3 +33,6 @@ pt-BR:
     password: Digite sua Senha
     password_confirmation: Confirme sua Senha
     description: Digite a Descrição
+    add_answer: Adicionar Resposta
+    correct: Correta?
+    remove: Remover?

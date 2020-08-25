@@ -13,6 +13,9 @@ pt-BR:
       question:
         one: Pergunta
         other: Perguntas
+      answer:
+        one: Resposta
+        other: Respostas
 
     attributes:
       attribute_commons: &commons
@@ -37,3 +40,5 @@ pt-BR:
         <<: *commons
         subject: Assunto
         subject_id: Assunto
+      answer:
+        <<: *commons
