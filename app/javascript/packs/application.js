@@ -22,6 +22,8 @@ import "../src/application.css";
 import "@fortawesome/fontawesome-free/js/all";
 import "./adminlte.min.js";
 
+import "cocoon-rails";
+
 import toastr from 'toastr';
 
 toastr.options = {
