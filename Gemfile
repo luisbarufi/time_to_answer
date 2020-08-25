@@ -33,6 +33,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'tty-spinner'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'kaminari'
+gem "cocoon"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
