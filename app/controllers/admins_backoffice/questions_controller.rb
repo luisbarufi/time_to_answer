@@ -40,15 +40,15 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
 
   private
 
-  def params_question
-    params.require(:question).permit(:description, :subject_id, answers_attributes: [:id, :description, :correct, :_destroy])
-  end
+    def params_question
+      params.require(:question).permit(:description, :subject_id, answers_attributes: [:id, :description, :correct, :_destroy])
+    end
 
-  def set_question
-    @question = Question.find(params[:id])
-  end
+    def set_question
+      @question = Question.find(params[:id])
+    end
 
-  def get_subjects
-    @subjects = Subject.all
-  end
+    def get_subjects
+      @subjects = Subject.all
+    end
 end

@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>TimeToAnswer</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>    
-    <%= stylesheet_pack_tag 'application' %><%#= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>  
-  </head>
+  <%= render 'layouts/head' %>
 
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -114,8 +104,6 @@
         <strong>Copyright &copy; <%= l(DateTime.now )%></strong>
       </footer>
     </div>
-
-    <%= javascript_pack_tag 'application' %><%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= render 'layouts/notifications' %>
 

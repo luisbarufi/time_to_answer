@@ -38,13 +38,13 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
     end
   end
 
-  private
+    private
 
-  def set_subject
-    @subject = Subject.find(params[:id])
-  end
+    def set_subject
+      @subject = Subject.find(params[:id])
+    end
 
-  def subject_params
-    params.require(:subject).permit(:description)
-  end
+    def subject_params
+      params.require(:subject).permit(:description)
+    end
 end
