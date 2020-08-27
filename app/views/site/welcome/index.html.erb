@@ -1,20 +1,15 @@
-<% @questions.each do |question| %>
-
-  <div class="card">
-    <h5 class="card-header" style="background-color: #E9ECEF;"> 
-      <%= question.description %>
-    </h5>
-
+<div class="card">
+  <% @questions.each do |question| %>
+    <h5 class="card-header" style="background-color: #E9ECEF;"> <%= question.description %> </h5>
     <div class="card-body">
       <ul>
-      
         <% question.answers.each do |answer|%>
           <li> <%= answer.description %> </li>
         <% end %>
-
       </ul>
     </div>
-
+  <% end %>
+  <div class="card-footer">
+    <%= paginate @questions %>
   </div>
-
-<% end %>
+</div>
