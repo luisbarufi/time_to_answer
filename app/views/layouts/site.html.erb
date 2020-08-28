@@ -13,6 +13,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+          <%= form_with(url: site_search_path, local: true, method: :get, class: "form-inline my-2 my-lg-0") do |form| %>
+            <%= form.text_field :term, class: "form-control mr-sm-2", placeholder: "Pesquisar" %>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          <% end %>
+
           <ul class="navbar-nav ml-auto">
             <% unless user_signed_in? %>
 
@@ -44,8 +49,23 @@
       </nav>
 
       <div class="jumbotron">
-        <%= yield %>
+        <h1>Site::Welcome#index</h1>
+        <p>Find me in app/views/site/welcome/index.html.erb</p>
+
+        <% if user_signed_in? %>
+          <p>Usuário ESTÁ logado! / <%= current_user.email %></p>
+        <% else %>
+          <p>Usuário NÂO está logado!</p>  
+        <% end %>
+
+
+        <% if admin_signed_in? %>
+          <p>Admin ESTÁ logado / <%= current_admin.email %></p>
+        <% else %>
+          <p>Admin NÂO está logado!</p>  
+        <% end %>
       </div>
+        <%= yield %>
     </main>
   
     <%= render 'layouts/notifications' %>
