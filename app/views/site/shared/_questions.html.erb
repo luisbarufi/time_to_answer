@@ -1,20 +1,22 @@
+<% @questions.each do |question| %>
+  <div class="card">
+      <h5 class="card-header" style="background-color: #E9ECEF;"> <%= question.description %> </h5>
+      <div class="card-body">
+        <ul>
+          <% question.answers.each do |answer|%>
+            <li> <%= answer.description %> </li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+<% end %>
+
 <div class="card">
-  <% @questions.each do |question| %>
-    <h5 class="card-header" style="background-color: #E9ECEF;"> <%= question.description %> </h5>
-    <div class="card-body">
-      <ul>
-        <% question.answers.each do |answer|%>
-          <li> <%= answer.description %> </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <%= javascript_tag nonce: true do %>
-    toastr["info"]("Nenhum registro encontrado");
-  <% end if @questions_count == 0 %>
-
   <div class="card-footer">
     <%= paginate @questions %>
   </div>
 </div>
+
+<%= javascript_tag nonce: true do %>
+  toastr["info"]("Nenhum registro encontrado");
+<% end if @questions_count == 0 %>
