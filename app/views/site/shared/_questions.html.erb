@@ -1,10 +1,10 @@
-  <div class="jumbotron">
-    <% unless params[:term] %>
-      <h3>Últimas perguntas cadastradas...</h3>
-    <% else %>
-      <h3><%= "Resultados para o termo: \"#{params[:term]}\"."%></h3>          
-    <% end %>
-  </div>
+<div class="jumbotron">
+  <% unless params[:term] %>
+    <h3>Últimas perguntas cadastradas...</h3>
+  <% else %>
+    <h3><%= "Resultados para o termo: \"#{params[:term]}\"."%></h3>          
+  <% end %>
+</div>
 
 <% @questions.each do |question| %>
   <%= form_with url: site_answer_path, local: true do |form| %>
