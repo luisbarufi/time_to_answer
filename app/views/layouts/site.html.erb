@@ -49,15 +49,7 @@
 
         </div>
       </nav>
-
-      <div class="jumbotron">
-        <% unless params[:term] %>
-          <h3>Últimas perguntas cadastradas...</h3>
-        <% else %>
-          <h3><%= "Reulstados para o termo: \"#{params[:term]}\"."%></h3>          
-        <% end %>
-      </div>
-        <%= yield %>
+      <%= yield %>
     </main>
   
     <%= render 'layouts/notifications' %>

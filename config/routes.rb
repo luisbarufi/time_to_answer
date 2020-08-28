@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   namespace :site do
-    get 'welcome/index'
-    get 'search', to: 'search#questions' # saindo um pouco do REST
+    get  'welcome/index'
+    get  'search', to: 'search#questions' # saindo um pouco do REST
+    post 'answer', to: 'answer#question'
   end
   
   namespace :users_backoffice do
