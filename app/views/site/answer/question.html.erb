@@ -1,1 +1,9 @@
-<h1 class="text-center" >O id da respota selecionada é: <%= params[:answer]%></h1>
+<div class="card">
+  <div class="card-body">
+    <% if @answer.correct %>
+      <h1 class="text-center" style="color: #28A745">Parabéns você ACERTOU!</h1>
+    <% else %>
+      <h1 class="text-center"style="color: red">Infelizmente você ERROU :( </h1>
+    <% end %>
+  </div>
+</div>
