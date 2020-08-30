@@ -26,7 +26,8 @@ pt-BR:
       title_edit: Editar Questão
       title_new: Cadastrar Questão
     welcome:
-      title: AdminsBackoffice
+      title_admins: AdminsBackoffice
+      title_users: UsersBackoffice
 
   forms:
     email: Digite seu E-mail

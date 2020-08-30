@@ -26,7 +26,8 @@ en:
       title_edit: Edit Questions
       title_new: Register Questions
     welcome:
-      title: AdminsBackoffice
+      title_admins: AdminsBackoffice
+      title_users: UsersBackoffice
 
   forms:
     email: Type your e-mail
