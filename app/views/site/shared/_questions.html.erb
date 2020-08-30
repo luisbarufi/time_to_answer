@@ -7,7 +7,7 @@
 </div>
 
 <% @questions.each do |question| %>
-  <%= form_with url: site_answer_path, local: true do |form| %>
+  <%= form_with url: site_answer_path do |form| %>
     <div class="card">
         <h5 class="card-header" style="background-color: #E9ECEF;"> <%= question.description %> </h5>
         <div class="card-body">
@@ -20,7 +20,7 @@
               </li>
             <% end %>
             <li style="list-style:none">
-              <%= form.submit 'Responder', class: "btn btn-primary btn-sm mt-2" %>
+              <%= form.submit 'Responder', class: "btn btn-default btn-sm mt-2", id: "submit_#{question.id}" %>
             </li>
           </ul>
         </div>
