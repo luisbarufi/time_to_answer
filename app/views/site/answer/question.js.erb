@@ -1,0 +1,15 @@
+
+var submitted = document.getElementById('submit_<%= @answer.question_id %>');
+
+submitted.classList.remove('btn-default');
+submitted.classList.remove('btn-success');
+submitted.classList.remove('btn-danger');
+
+
+if (<%= @answer.correct %>){
+  submitted.classList.add('btn-success');
+  toastr["success"]("Parabéns voce ACERTOU!!!")
+} else {
+  submitted.classList.add('btn-danger');
+  toastr["error"]("Infelizente você ERROU!!!")
+}
