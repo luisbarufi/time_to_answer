@@ -5,4 +5,8 @@ class Site::SearchController < SiteController
 
     @questions_count = @questions.all.to_a.size
   end
+
+  def subject
+    @questions = Question.search_term_subject(params[:page], params[:subject_id])
+  end
 end
