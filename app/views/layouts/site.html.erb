@@ -6,8 +6,10 @@
   <body>
     <main role="main" class="container">
       <nav class="navbar navbar-expand-lg navbar-light mt-3 mb-3" style="background-color: #E9ECEF;">
-
-        <%= link_to 'Time to Answer', root_path, class: "navbar-brand ml-4 mr-4"%>
+        <div class="brand-link">
+          <%= image_tag("logo.png", options = { alt: "Time to answer Logo", class: "brand-image img-circle elevation-3", style: "opacity: .8" }) %>
+        </div>
+        <%= link_to 'Time to Answer', root_path, class: "navbar-brand"%>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,7 +38,7 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <%= current_user.email %>
+                  <i class="far fa-user-circle mr-2"></i> <%= current_user.email %>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <%= link_to users_backoffice_welcome_index_path, class:"dropdown-item" do %>
