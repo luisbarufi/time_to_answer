@@ -12,28 +12,25 @@
           <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
           </li>
-          <li class="nav-item d-none d-sm-inline-block">
-            <%= link_to 'Ir para Site', root_path, class: "nav-link" %>
-          </li> 
         </ul>
 
         <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item">
-            <div class="dropdown">
+            <div class="dropdown">              
               <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i>
+                <i class="far fa-user-circle mr-2"></i> <%= current_user.email %>
               </button>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <ul class="list-group">
-                  <li class="nav-link">
-                    <%= current_user.email %>
-                  </li>
-                  <li class="nav-link">
-                    <%= link_to destroy_user_session_path, method: :delete do %>
-                      <i class='fas fa-sign-out-alt'></i> Sair
-                    <% end %>
-                  </li>
-                </ul>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                <%= link_to root_path, class:"dropdown-item" do %>
+                  <i class="fas fa-rocket mr-2"></i> Ir para Site
+                <% end %>
+
+                <div class="dropdown-divider"></div>
+                <%= link_to destroy_user_session_path, method: :delete, class:"dropdown-item" do %>
+                  <i class='fas fa-sign-out-alt mr-2'></i> Sair
+                <% end %>
+
               </div>
             </div>
           </li>
@@ -42,25 +39,31 @@
       </nav>
 
       <aside class="main-sidebar sidebar-light-primary elevation-4">
-        <a href="#" class="brand-link">
-          <!--img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"-->
-          <span class="brand-text font-weight-light">Backoffice Usuário</span>
-        </a>
+        <div class="brand-link">
+          <%= image_tag("logo.png", options = { alt: "Time to answer Logo", class: "brand-image img-circle elevation-3", style: "opacity: .8" }) %>
+          <span class="brand-text font-weight-light">Time to Answer</span>
+        </div>
 
         <div class="sidebar">
 
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <%= image_tag("avatar.png", options = {class: "img-circle elevation-2"}) %>
+              <%= image_tag("avatar.png", options = {class: "img-circle elevation-2", alt: "avatar"}) %>
             </div>
             <div class="info">
-              <!--a href="#" class="d-block">Alexander Pierce</a-->
               <%= current_user.full_name %>
             </div>
           </div>
 
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+              <li class="nav-item">
+                <%= link_to users_backoffice_welcome_index_path, class:"nav-link" do  %>
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>Início</p>
+                <% end %>
+              </li>
 
               <li class="nav-item">
                 <%= link_to users_backoffice_profile_path, class:"nav-link" do  %>
