@@ -34,6 +34,22 @@
         <%= form.label :email %>
         <%= form.text_field :email, class: "form-control", readonly: true %>
       </div>
+
+      <%= form.fields_for :user_profile do |profile_form| %>
+        <div class="form-group">
+          <%= profile_form.label :address %>
+          <%= profile_form.text_field :address, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= profile_form.label :gender %>
+          <%= profile_form.text_field :gender, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= profile_form.label :birthdate %>
+          <%= profile_form.text_field :birthdate, class: "form-control" %>
+        </div>
+      <% end %>
+
       <div class="form-group">
         <%= form.label :password %>
         <%= form.text_field :password, class: "form-control", type:"password", placeholder: "Senha" %>
