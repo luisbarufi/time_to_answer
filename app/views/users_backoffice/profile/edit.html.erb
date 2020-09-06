@@ -30,25 +30,54 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
-        <%= form.label :email %>
-        <%= form.text_field :email, class: "form-control", readonly: true %>
-      </div>
 
       <%= form.fields_for :user_profile do |profile_form| %>
+
+        <%= profile_form.label :gender %>
+        <div class="form-group">
+          <div id="gender" class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn <%= gender_select(@user, "M")%>">
+              <%= profile_form.radio_button :gender, "M" %> Masculino
+            </label>
+            <label class="btn <%= gender_select(@user, "F")%>">
+              <%= profile_form.radio_button :gender, "F" %> Feminino
+            </label>
+          </div>
+        </div>
+
+        <%= javascript_tag  do %>
+          var labels = document.querySelectorAll('div#gender label');
+
+          labels.forEach((label) => {
+            label.addEventListener('click', () => {
+              label.classList.remove('btn-default');
+              label.classList.add('btn-primary');
+
+              labels.forEach((lbl) => {
+                if(lbl !== label) {
+                  lbl.classList.remove('btn-primary');
+                  lbl.classList.add('btn-default');                  
+                };
+              });
+            });
+          });
+        <% end %>
+
         <div class="form-group">
           <%= profile_form.label :address %>
           <%= profile_form.text_field :address, class: "form-control" %>
         </div>
-        <div class="form-group">
-          <%= profile_form.label :gender %>
-          <%= profile_form.text_field :gender, class: "form-control" %>
-        </div>
+
         <div class="form-group">
           <%= profile_form.label :birthdate %>
           <%= profile_form.text_field :birthdate, class: "form-control" %>
         </div>
       <% end %>
+
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", readonly: true %>
+      </div>
 
       <div class="form-group">
         <%= form.label :password %>
