@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   
   devise_for :users
   devise_for :admins, skip: [ :registration ]
+
+  get 'commando', to: 'admins_backoffice/welcome#index'
   
   root 'site/welcome#index'
 
