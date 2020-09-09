@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+  <%= render 'layouts/modal' %>
   <%= render 'layouts/head' %>
 
   <body class="hold-transition sidebar-mini">
@@ -48,7 +49,7 @@
 
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <%= image_tag("avatar.png", options = {class: "img-circle elevation-2", alt: "avatar"}) %>
+              <%= link_to image_tag("avatar.png", options = {class: "img-circle elevation-2", alt: "avatar"}), '#', "data-toggle":"modal", "data-target":"#avatarModal" %>
             </div>
             <div class="info">
               <%= current_user.full_name %>
