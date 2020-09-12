@@ -9,9 +9,7 @@ class UsersBackoffice::ProfileController < UsersBackofficeController
   def update
     if @user.update(user_params)
       bypass_sign_in(@user)
-      if user_params[:user_profile_attributes][:avatar]
-        redirect_to users_backoffice_welcome_index_path, notice: "Avatar atualizado com sucesso!"
-      else
+      unless user_params[:user_profile_attributes][:avatar]
         redirect_to users_backoffice_profile_path, notice: "Usuário atualizado com sucesso!"
       end
     else

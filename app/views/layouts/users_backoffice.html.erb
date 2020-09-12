@@ -18,7 +18,7 @@
         <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item">
             <div class="user-panel">
-              <%= image_tag(avatar_url, class: "img-circle", alt: "avatar") %>
+              <%= image_tag(avatar_url, class: "img-circle", alt: "avatar", id: "avatarImgNav") %>
             </div>
           </li>
           <li class="nav-item">
@@ -54,7 +54,7 @@
 
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <%= link_to image_tag(avatar_url, class: "img-circle", alt: "avatar"), '#', "data-toggle":"modal", "data-target":"#avatarModal" %>
+              <%= link_to image_tag(avatar_url, class: "img-circle", alt: "avatar", id: "avatarImgMenu"), '#', "data-toggle":"modal", "data-target":"#avatarModal" %>
             </div>
             <div class="info">
               <%= current_user.full_name %>

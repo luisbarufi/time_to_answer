@@ -1,0 +1,8 @@
+
+$('#avatarModal').modal('hide')
+
+document.getElementById('avatarImgNav').src = "<%= url_for(@user.user_profile.avatar) %>"
+document.getElementById('avatarImgMenu').src = "<%= url_for(@user.user_profile.avatar) %>"
+document.getElementById('avatarImgModal').src = "<%= url_for(@user.user_profile.avatar) %>"
+
+toastr["success"]("Atualizado com sucesso!");

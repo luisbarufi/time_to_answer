@@ -1,2 +1,20 @@
 @import "./adminlte.min.css";
 @import "toastr";
+
+.img-fluid {
+  max-width: 137%;
+  height: auto;
+  margin-left: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-fluid {
+    max-width: 70%;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
