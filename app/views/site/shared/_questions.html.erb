@@ -29,7 +29,13 @@
 
 <div class="card">
   <div class="card-footer">
-    <%= paginate @questions %>
+    <% if user_signed_in? %>
+      <%= paginate @questions %>
+    <% else %>
+      <div class="alert alert-warning mt-3 text-center" role="alert">
+        Efetue o login para poder continuar respondendo as questões...
+      </div>
+    <% end %>
   </div>
 </div>
 
