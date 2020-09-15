@@ -1,10 +1,10 @@
 pt-BR:
   views:
     pagination:
-      first: "&laquo;"
-      last: "&raquo;"
-      previous: "&lsaquo;"
-      next: "&rsaquo;"
+      first: "&laquo; Primeira"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Próxima &rsaquo;"
       truncate: "&hellip;"
     actions:
       show: Ver
