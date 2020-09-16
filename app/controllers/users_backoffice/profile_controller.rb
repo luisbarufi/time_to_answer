@@ -19,7 +19,7 @@ class UsersBackoffice::ProfileController < UsersBackofficeController
 
   private
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation,
+      params.require(:user).permit(:locale, :time_zone, :first_name, :last_name, :email, :password, :password_confirmation,
         user_profile_attributes: [:id, :address, :gender, :birthdate, :avatar] )
     end
 

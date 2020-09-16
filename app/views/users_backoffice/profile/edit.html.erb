@@ -28,6 +28,10 @@
             <%= form.label :last_name %>
             <%= form.text_field :last_name, class: "form-control", placeholder: "Sobrenome" %>
           </div>
+          <div class="col-12 mt-2 col-sm-6">
+            <%= form.label :locale %>
+            <%= form.select :locale, User.locales.keys.map {|key| [User.human_attribute_name("locale.#{key}"), key]}, class: "form-control" %>
+          </div>
         </div>
       </div>
 

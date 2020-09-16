@@ -32,6 +32,10 @@ pt-BR:
 
       user:
         <<: *commons
+        locale: Idioma
+      user/locale:
+        pt-BR: Português
+        en: English
 
       subject:
         <<: *commons
