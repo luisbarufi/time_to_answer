@@ -7,6 +7,9 @@ pt-BR:
       user:
         one: Usuário
         other: Usuários
+      user_profiles:
+        one: Perfil de Usuário
+        other: Perfils de Usuários
       subject:
         one: Assunto
         other: Assuntos
@@ -33,9 +36,23 @@ pt-BR:
       user:
         <<: *commons
         locale: Idioma
+        first_name: Nome
+        last_name: Sobrenome
+        time_zone: Fuso Horário
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação da senha
       user/locale:
         pt-BR: Português
         en: English
+
+      user_profile:
+        address: Endereço
+        gender: Sexo
+        birthdate: Data de Nascimento
+        user_id: Usuário
+        created_at: Data de criação
+        updated_at: Data de Atualização
 
       subject:
         <<: *commons
