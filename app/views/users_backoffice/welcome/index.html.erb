@@ -3,7 +3,51 @@
     <h1><%= t('views.welcome.title_users')%></h1>
   </div>
   <div class="card-body">
-    
+<div class="row">
+  <div class="col-lg-3 col-6">
+    <div class="small-box bg-info">
+      <div class="inner">
+        <h3><%= @user_statistic.total_questions %></h3>
+
+        <p>Total de questões</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-chatbubbles"></i>
+      </div>
+      <p class="small-box-footer">Total de questões respondidas</p>
+      <!-- a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a-->
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="small-box bg-success">
+      <div class="inner">
+        <h3><%= @user_statistic.right_questions %></h3>
+        <p>Total de Acertos</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-checkmark-circled"></i>
+      </div>
+      <p class="small-box-footer">Parabéns, continue respondendo!</p>
+      <!--a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a-->
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-6">
+    <div class="small-box bg-danger">
+      <div class="inner">
+        <h3><%= @user_statistic.wrong_questions %></h3>
+        <p>Total de Erros</p>
+      </div>
+      <div class="icon">
+        <i class="ion ion-close-circled"></i>
+      </div>
+      <p class="small-box-footer">Estude mais e tente novamente</p>
+      <!--a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a-->
+    </div>
+  </div>
+
+</div>
   </div>
   <div class="card-footer">
   </div>

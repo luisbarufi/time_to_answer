@@ -27,7 +27,7 @@ pt-BR:
       title_new: Cadastrar Questão
     welcome:
       title_admins: AdminsBackoffice
-      title_users: UsersBackoffice
+      title_users: Seja Ben-Vindo!
 
   forms:
     email: Digite seu E-mail
