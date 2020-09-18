@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_010415) do
+ActiveRecord::Schema.define(version: 2020_09_18_014211) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -79,6 +79,15 @@ ActiveRecord::Schema.define(version: 2020_09_16_010415) do
     t.index ["user_id"], name: "index_user_profiles_on_user_id"
   end
 
+  create_table "user_statistics", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "right_questions", default: 0
+    t.integer "wrong_questions", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_statistics_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -99,4 +108,5 @@ ActiveRecord::Schema.define(version: 2020_09_16_010415) do
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "subjects"
   add_foreign_key "user_profiles", "users"
+  add_foreign_key "user_statistics", "users"
 end
