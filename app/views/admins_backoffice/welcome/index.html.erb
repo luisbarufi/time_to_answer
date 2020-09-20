@@ -3,7 +3,27 @@
     <h1><%= t('views.welcome.title_admins')%></h1>
   </div>
   <div class="card-body">
-    
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box">
+          <span class="info-box-icon bg-info elevation-1"><i class="far fa-comments"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Total de Usuários</span>
+            <span class="info-box-number"><%= @total_users %></span>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix hidden-md-up"></div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Total de questões</span>
+            <span class="info-box-number"> <%= @total_questions %></span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="card-footer">
   </div>
