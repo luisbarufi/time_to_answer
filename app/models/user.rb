@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   after_create :set_statistic
 
-  validates :first_name, presence: true, length: { minimum: 3 }, on: :update
+  validates :first_name, presence: true, length: { minimum: 3 }, on: :update, unless: :reset_password_token_present?
 
   enum locale: {"pt-BR": 'pt-BR', "en": 'en'}
 
@@ -21,5 +21,9 @@ class User < ApplicationRecord
 
   def set_statistic
     AdminStatistic.set_event(AdminStatistic::EVENTS[:total_users])
+  end
+
+  def reset_password_token_present?
+    !!$global_params[:user][:reset_password_token]
   end
 end
