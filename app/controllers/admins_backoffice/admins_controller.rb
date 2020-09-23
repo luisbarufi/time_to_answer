@@ -25,7 +25,8 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
   def update
     if @admin.update(admin_params)
-      sign_in(@admin, bypass: true)
+      # sign_in(@admin, bypass: true)
+      AdminMailer.update_email(current_admin, @admin).deliver_now #não é recomendado usera deliver_now
       redirect_to admins_backoffice_admins_path, notice: "Admin atualizado com sucesso!"
     else
       render :edit
