@@ -58,7 +58,7 @@
 
                 <%= link_to admins_backoffice_admins_path, class:"nav-link" do %>
                   <i class="nav-icon fas fa-users"></i>
-                  <p>Admistradores</p>
+                  <p><%= t('activerecord.models.admin.other') %></p>
                 <% end %>
 
               </li>
@@ -67,7 +67,7 @@
 
                 <%= link_to admins_backoffice_subjects_path, class:"nav-link" do %>
                   <i class="nav-icon fas fa-file-alt"></i>
-                  <p>Assuntos/Áreas</p>
+                  <p><%= t('views.subjets.title_list') %></p>
                 <% end %>
 
               </li>
@@ -76,7 +76,7 @@
 
                 <%= link_to admins_backoffice_questions_path, class:"nav-link" do %>
                   <i class="nav-icon fas fa-list"></i>
-                  <p>Perguntas</p>
+                  <p><%= t('views.questions.title_list') %></p>
                 <% end %>
 
               </li>
@@ -101,7 +101,7 @@
         <div class="float-right d-none d-sm-inline">
           <p>barufiTech</p>
         </div>
-        <strong>Copyright &copy; <%= l(DateTime.now )%></strong>
+        <strong>Copyright &copy; <%= Date.today.year %></strong>
       </footer>
     </div>
 
