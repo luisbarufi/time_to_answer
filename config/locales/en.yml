@@ -13,6 +13,12 @@ en:
       new: New
       save: Save
       confirm: Are you sure?
+      answer: Answer
+      sign_in: Login
+      sign_up: Sign Up
+      profile: Profile
+      logout: Logout
+      search: Search Question
     admins:
       title_list: Admins
       title_edit: Edit Admin
@@ -28,6 +34,8 @@ en:
     welcome:
       title_admins: AdminsBackoffice
       title_users: welcome
+      
+    title_alert: Log in to continue answering questions...
 
   forms:
     email: Type your e-mail
@@ -37,3 +45,6 @@ en:
     add_answer: Add answer
     correct: Correct?
     remove: Remove?
+  
+  search:
+    errors: No records found
