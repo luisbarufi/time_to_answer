@@ -13,6 +13,12 @@ pt-BR:
       new: Novo
       save: Salvar
       confirm: Tem certeza?
+      answer: Responder
+      sign_in: Entrar
+      sign_up: Cadastrar-se
+      profile: Perfil
+      logout: Sair
+      search: Pesquisar Pergunta
     admins:
       title_list: Administradores
       title_edit: Editar Administrador
@@ -29,6 +35,8 @@ pt-BR:
       title_admins: Seja Ben-Vindo!
       title_users: Seja Ben-Vindo!
 
+    title_alert: Efetue o login para poder continuar respondendo as questões...
+
   forms:
     email: Digite seu E-mail
     password: Digite sua Senha
@@ -37,3 +45,6 @@ pt-BR:
     add_answer: Adicionar Resposta
     correct: Correta?
     remove: Remover?
+
+  search:
+    errors: Nenhum registro encontrado

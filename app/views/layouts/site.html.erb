@@ -19,7 +19,7 @@
 
           <%= form_with(url: site_search_path, local: true, method: :get, class: "form-inline ml-3") do |form| %>
             <div class="input-group input-group-sm">
-              <%= form.text_field :term, class: "form-control form-control-navbar", placeholder: "Pesquisar pergunta" %>
+              <%= form.text_field :term, class: "form-control form-control-navbar", placeholder: t('views.actions.search') %>
               <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
                   <i class="fas fa-search"></i>
@@ -39,8 +39,8 @@
               <a class="nav-link" href="?locale=en">English</a>
             </li>
 
-              <%= link_to 'Login', new_user_session_path, class:"nav-link"%>
-              <%= link_to 'Cadastrar-se', new_user_registration_path, class:"nav-link"%>
+              <%= link_to t('views.actions.sign_in'), new_user_session_path, class:"nav-link"%>
+              <%= link_to  t('views.actions.sign_up'), new_user_registration_path, class:"nav-link"%>
 
             <% else %>
 
@@ -50,11 +50,11 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <%= link_to users_backoffice_welcome_index_path, class:"dropdown-item" do %>
-                    <i class="far fa-id-card mr-2"></i> Perfil
+                    <i class="far fa-id-card mr-2"></i> <%= t('views.actions.profile') %>
                   <% end %>
                   <div class="dropdown-divider"></div>
                   <%= link_to destroy_user_session_path, method: :delete, class:"dropdown-item" do %>
-                    <i class='fas fa-sign-out-alt mr-2'></i> Sair
+                    <i class='fas fa-sign-out-alt mr-2'></i> <%= t('views.actions.logout') %>
                   <% end %>
                 </div>
               </li>

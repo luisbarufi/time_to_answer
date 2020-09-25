@@ -19,7 +19,7 @@
               </li>
             <% end %>
             <li style="list-style:none">
-              <%= form.submit 'Responder', class: "btn btn-default btn-sm mt-2", id: "submit_#{question.id}" %>
+              <%= form.submit t('views.actions.answer'), class: "btn btn-default btn-sm mt-2", id: "submit_#{question.id}" %>
             </li>
           </ul>
         </div>
@@ -33,12 +33,12 @@
       <%= paginate @questions %>
     <% else %>
       <div class="alert alert-warning mt-3 text-center" role="alert">
-        Efetue o login para poder continuar respondendo as questões...
+        <%= t('views.title_alert') %>
       </div>
     <% end %>
   </div>
 </div>
 
 <%= javascript_tag nonce: true do %>
-  toastr["info"]("Nenhum registro encontrado");
+  toastr["info"]("<%= t('search.errors') %>");
 <% end if @questions_count == 0 %>
